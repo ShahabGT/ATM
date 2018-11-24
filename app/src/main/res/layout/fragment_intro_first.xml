@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+    <LinearLayout
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:id="@+id/first_linear"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/first_img"
+            android:layout_width="300dp"
+            android:src="@drawable/logo"
+            android:layout_height="150dp" />
+        <TextView
+            android:id="@+id/first_largetext"
+            android:gravity="center"
+            android:text="@string/intro_first_fragment_text1"
+            android:textColor="@color/ubuntu_orange"
+            android:fontFamily="@font/ubuntu"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            app:autoSizeTextType="uniform"
+            app:autoSizeMaxTextSize="30sp"
+            app:autoSizeMinTextSize="13sp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_below="@+id/first_linear"
+        android:gravity="center"
+        android:text="@string/intro_first_fragment_text2"
+        android:textColor="@color/colorPrimary"
+        android:fontFamily="@font/ubuntu"
+        app:autoSizeTextType="uniform"
+        app:autoSizeMaxTextSize="15sp"
+        app:autoSizeMinTextSize="10sp"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/fif_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Spinner
+        android:spinnerMode="dropdown"
+        android:id="@+id/fif_spinner"
+        android:textAlignment="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>

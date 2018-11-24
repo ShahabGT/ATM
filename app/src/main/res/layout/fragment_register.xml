@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/bluegraybg"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    >
+    <LinearLayout
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+      >
+
+        <ImageView
+            android:id="@+id/reg_avatar"
+            android:layout_gravity="center"
+            android:src="@drawable/male"
+            android:layout_marginTop="15dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp" />
+            <RadioGroup
+                android:id="@+id/reg_sex"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <RadioButton
+                    android:fontFamily="@font/ubuntu"
+                    style="@style/Base.TextAppearance.AppCompat.Medium"
+                    android:id="@+id/reg_male"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:text="@string/reg_male"
+                    android:checked="true" />
+
+                <RadioButton
+                    android:fontFamily="@font/ubuntu"
+                    style="@style/Base.TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/white"
+                    android:id="@+id/reg_female"
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/reg_female" />
+
+            </RadioGroup>
+
+        <LinearLayout
+            android:id="@+id/login_linear"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/reg_name_input"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="50dp"
+                android:padding="10dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginRight="50dp"
+                app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout"
+                android:textColorHint="@color/white"
+                android:layout_height="wrap_content" >
+                <EditText
+                    android:id="@+id/reg_name"
+                    style="@style/Base.TextAppearance.AppCompat.Large"
+                    android:textColorHint="@color/white"
+                    android:fontFamily="@font/ubuntu"
+                    android:textColor="@color/black"
+                    app:backgroundTint="@color/white"
+                    android:hint="@string/reg_name"
+                    android:layout_width="match_parent"
+                    android:inputType="textPersonName"
+                    android:maxLength="20"
+                    android:singleLine="true"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/reg_user_input"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="50dp"
+                android:padding="10dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginRight="50dp"
+                app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout"
+                android:textColorHint="@color/white"
+                android:layout_height="wrap_content" >
+                <EditText
+                    android:id="@+id/reg_user"
+                    style="@style/Base.TextAppearance.AppCompat.Large"
+                    android:textColorHint="@color/white"
+                    android:fontFamily="@font/ubuntu"
+                    android:textColor="@color/black"
+                    app:backgroundTint="@color/white"
+                    android:hint="@string/reg_username"
+                    android:layout_width="match_parent"
+                    android:inputType="text"
+                    android:digits="@string/username_style"
+                    android:maxLength="20"
+                    android:singleLine="true"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/reg_email_input"
+                android:layout_width="match_parent"
+                android:layout_marginTop="7dp"
+                android:layout_marginLeft="50dp"
+                android:padding="10dp"
+                android:layout_marginRight="50dp"
+                app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout"
+                android:textColorHint="@color/white"
+                android:layout_height="wrap_content" >
+                <EditText
+                    android:id="@+id/reg_email"
+                    style="@style/Base.TextAppearance.AppCompat.Large"
+                    android:textColorHint="@color/white"
+                    android:fontFamily="@font/ubuntu"
+                    android:textColor="@color/black"
+                    app:backgroundTint="@color/white"
+                    android:hint="@string/reg_email"
+                    android:layout_width="match_parent"
+                    android:inputType="textEmailAddress"
+                    android:maxLength="50"
+                    android:digits="@string/email_style"
+                    android:singleLine="true"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/reg_pass_input"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="7dp"
+                android:padding="10dp"
+                android:layout_marginRight="50dp"
+                app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout"
+                android:textColorHint="@color/white"
+                android:layout_height="wrap_content" >
+                <EditText
+                    android:id="@+id/reg_pass"
+                    style="@style/Base.TextAppearance.AppCompat.Large"
+                    android:fontFamily="@font/ubuntu"
+                    android:textColorHint="@color/white"
+                    android:inputType="textPassword"
+                    android:maxLength="20"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    app:backgroundTint="@color/white"
+                    android:hint="@string/reg_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/reg_repass_input"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="50dp"
+                android:padding="10dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginRight="50dp"
+                app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout"
+                android:textColorHint="@color/white"
+                android:layout_height="wrap_content" >
+                <EditText
+                    android:id="@+id/reg_repass"
+                    style="@style/Base.TextAppearance.AppCompat.Large"
+                    android:fontFamily="@font/ubuntu"
+                    android:textColorHint="@color/white"
+                    android:inputType="textPassword"
+                    android:maxLength="20"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    app:backgroundTint="@color/white"
+                    android:hint="@string/reg_repassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:padding="15dp"
+            android:layout_height="wrap_content">
+            <Button
+                android:text="@string/reg_reg"
+                android:textColor="@color/white"
+                android:paddingTop="15dp"
+                android:layout_marginBottom="5dp"
+                android:textStyle="bold"
+                android:paddingBottom="15dp"
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp"
+                android:id="@+id/reg_reg"
+                style="@style/Base.TextAppearance.AppCompat.Medium"
+                android:background="@drawable/buttonbg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+</ScrollView>
+

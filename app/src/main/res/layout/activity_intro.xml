@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".Activities.IntroActivity">
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <com.rd.PageIndicatorView
+        android:id="@+id/pageIndicatorView"
+        android:layout_gravity="top|center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:piv_animationType="swap"
+        app:piv_dynamicCount="true"
+        android:padding="10dp"
+        app:piv_interactiveAnimation="true"
+        app:piv_selectedColor="@color/colorAccent"
+        app:piv_unselectedColor="@color/Blue_Gray_700"
+        app:piv_viewPager="@id/viewPager" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@drawable/bluegraybg"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    >
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/user_avatar"
+            android:layout_gravity="center"
+            android:src="@drawable/male"
+            android:layout_marginTop="15dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp" />
+        <LinearLayout
+            android:id="@+id/login_linear"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+                <TextView
+                    android:background="@drawable/graybuttonbg"
+                    android:layout_marginTop="7dp"
+                    android:id="@+id/user_name"
+                    style="@style/Base.TextAppearance.AppCompat.Large"
+                    android:fontFamily="@font/ubuntu"
+                    android:textColor="@color/white"
+                    android:padding="10dp"
+                    android:text="name"
+                    android:layout_marginLeft="50dp"
+                    android:gravity="center"
+                    android:layout_marginRight="50dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/user_username"
+                style="@style/Base.TextAppearance.AppCompat.Large"
+                android:fontFamily="@font/ubuntu"
+                android:textColor="@color/white"
+                android:padding="10dp"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/graybuttonbg"
+                android:text="username"
+                android:layout_marginLeft="50dp"
+                android:gravity="center"
+                android:layout_marginRight="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/user_email"
+                style="@style/Base.TextAppearance.AppCompat.Large"
+                android:fontFamily="@font/ubuntu"
+                android:textColor="@color/white"
+                android:padding="10dp"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/graybuttonbg"
+                android:text="email"
+                android:layout_marginLeft="50dp"
+                android:gravity="center"
+                android:layout_marginRight="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/user_oldpass_input"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="50dp"
+                android:padding="10dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginTop="7dp"
+
+                app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout"
+                android:textColorHint="@color/white"
+                android:layout_height="wrap_content" >
+                <EditText
+                    android:id="@+id/user_oldpass"
+                    style="@style/Base.TextAppearance.AppCompat.Large"
+                    android:fontFamily="@font/ubuntu"
+                    android:textColorHint="@color/white"
+                    android:inputType="textPassword"
+                    android:maxLength="20"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    app:backgroundTint="@color/white"
+                    android:hint="@string/reg_oldpassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/user_pass_input"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="50dp"
+                android:padding="10dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginTop="7dp"
+                app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout"
+                android:textColorHint="@color/white"
+                android:layout_height="wrap_content" >
+                <EditText
+                    android:id="@+id/user_pass"
+                    style="@style/Base.TextAppearance.AppCompat.Large"
+                    android:fontFamily="@font/ubuntu"
+                    android:textColorHint="@color/white"
+                    android:inputType="textPassword"
+                    android:maxLength="20"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    app:backgroundTint="@color/white"
+                    android:hint="@string/reg_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/user_repass_input"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="50dp"
+                android:padding="10dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginRight="50dp"
+                app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout"
+                android:textColorHint="@color/white"
+                android:layout_height="wrap_content" >
+                <EditText
+                    android:id="@+id/user_repass"
+                    style="@style/Base.TextAppearance.AppCompat.Large"
+                    android:fontFamily="@font/ubuntu"
+                    android:textColorHint="@color/white"
+                    android:inputType="textPassword"
+                    android:maxLength="20"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    app:backgroundTint="@color/white"
+                    android:hint="@string/reg_repassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:padding="15dp"
+            android:layout_height="wrap_content">
+            <Button
+                android:text="@string/apply"
+                android:textColor="@color/white"
+                android:paddingTop="15dp"
+                android:layout_marginBottom="5dp"
+                android:textStyle="bold"
+                android:paddingBottom="15dp"
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp"
+                android:id="@+id/user_apply"
+                style="@style/Base.TextAppearance.AppCompat.Medium"
+                android:background="@drawable/buttonbg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+</ScrollView>
+

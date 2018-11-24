@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">ATM</string>
+
+
+    <string name="activity_pic_url" translatable="false">https://shahabazimi.ir/atm/Activities/%s.png</string>
+    <string name="base_url" translatable="false">https://shahabazimi.ir/atm/</string>
+
+
+    <string name="intro_first_fragment_text1">به مدیریت زمان فعالیت ها خوش آمدید</string>
+    <string name="intro_first_fragment_text2">لطفا زبان مورد نظر را انتخاب کنید</string>
+
+    <string name="intro_second_fragment_text1">فعالیت مورد نظر را انتخاب کنید، برنامه میزان زمانی که صرف آن کردید محاسبه می کند</string>
+
+    <string name="intro_third_fragment_text1">نگران از دست دادن اطلاعات برنامه خود نباشد. پایگاه داده این برنامه بر روی ابر می باشد. \n همچنین این برنامه کاملا رایگان و متن باز می باشد.</string>
+
+    <string name="intro_fourth_fragment_text1">برای شروع اینترنت خود را فعال کنید و یک حساب کاربری بسازید. \n همین!!!</string>
+    <string name="intro_fourth_fragment_text2">شروع</string>
+
+    <string name="login_username">نام کاربری</string>
+    <string name="login_resetpass">رمز خود را فراموش کرده اید؟</string>
+    <string name="login_password">رمز ورود</string>
+    <string name="login_login">ورود</string>
+    <string name="login_register">برای ساخت حساب کاربری اینجا را کلیک کنید</string>
+    <string name="login_user_error">نام کاربری را وارد کنید</string>
+    <string name="login_pass_error">رمز ورود را وارد کنید</string>
+    <string name="login_user_notexists">نام کاربری یافت نشد!</string>
+    <string name="login_wrong_pass">رمز ورود اشتباه است!</string>
+    <string name="login_success">ورود موفیقت آمیز بود. %s خوش آمدید</string>
+
+
+    <string name="reg_username">نام کاربری</string>
+    <string name="reg_password">رمز ورود</string>
+    <string name="reg_oldpassword">رمز ورود قبلی</string>
+    <string name="reg_repassword">تکرار رمز ورود</string>
+    <string name="reg_name">نام و نام خانوادگی</string>
+    <string name="reg_male">مرد</string>
+    <string name="reg_female">زن</string>
+    <string name="reg_reg">ثبت نام</string>
+    <string name="reg_email">ایمیل</string>
+    <string name="reg_pass_error">رمز عبور را بررسی کنید</string>
+    <string name="reg_name_error">نام را وارد کنید</string>
+    <string name="reg_email_error">ایمیل را وارد کنید</string>
+    <string name="reg_user_error">نام کاربری را وارد کنید</string>
+    <string name="reg_user_exists">نام کاربری قبلا ثبت شده است</string>
+    <string name="reg_email_exists">ایمیل قبلا ثبت شده است</string>
+    <string name="reg_success">ثبت نام با موفقیت انجام شد. %s خوش آمدید</string>
+
+    <string name="internet_error">اتصال به اینترنت را بررسی کنید</string>
+    <string name="error">خطا! لطفا دوباره امتحان کنید</string>
+    <string name="progressdialogtext">لطفا منتظر باشید...</string>
+    <string name="bottomnavigation_home">خانه</string>
+    <string name="start">شروع</string>
+    <string name="stop">پایان</string>
+    <string name="cancel">انصراف</string>
+    <string name="search">جستجو</string>
+    <string name="statistics">آمار</string>
+    <string name="messages">پیام ها</string>
+    <string name="onbackpressed">برای خروج کلید بازگشت را دوباره بفشارید</string>
+    <string name="apply">اعمال</string>
+    <string name="select_language">انتخاب زبان برنامه</string>
+    <string name="select_date">انتخاب تاریخ</string>
+    <string name="setting_text">با کلیل بر روی اعمال برنامه بسته می شود</string>
+    <string name="no_data">داده ای موجود نیست</string>
+
+    <string name="history">تاریخچه فعالیت در 7 روز گذشته(به ساعت)</string>
+    <string name="notificationMessage">برای نمایش یا متوقف کردن فعالیت کلیک کنید</string>
+    <string name="notificationTitle">%s در حال انجام </string>
+
+    <string name="permission_allow">اجازه دادن</string>
+    <string name="permission_deny">رد کردن</string>
+    <string name="permission_denied">اجازه داده نشد</string>
+    <string name="permission_settings">لطفا اجازه دسترسی را در تنظیمات فعال کنید</string>
+    <string name="read_phone_state_title">خواندن وضعیت گوشی</string>
+    <string name="read_phone_state_message">به دلایل امنیتی نیازمند خواندن وضعیت گوشی هستیم لطفا اجازه دسترسی به این درخواست را بدهید.</string>
+
+    <string name="navigation_user">حساب کاربری</string>
+    <string name="navigation_stats">آمار</string>
+    <string name="navigation_message">پیام ها</string>
+    <string name="navigation_settings">تنظیمات</string>
+    <string name="navigation_about">درباره</string>
+    <string name="navigation_logout">خروج</string>
+
+    <string name="chngpass_wrongpass">رمز ورود اشتباه است!</string>
+    <string name="chngpass_fillform">فرم را پر کنید</string>
+    <string name="chngpass_passlenght">طول رمز ورود باید بیشتر از 8 حرف باشد</string>
+    <string name="chngpass_passnotmach">رمز ورود اشتباه است</string>
+    <string name="chngpass_passduplicate">رمز عبور قبلی با رمز عبور جدید نباید همسان باشد</string>
+    <string name="chngpass_success">رمز عبور با موفقیت تغییر یافت</string>
+
+    <string name="about_title">مدیریت زمان فعالیت ها</string>
+    <string name="about_version">نسخه %s</string>
+    <string name="about_timestamp">1397 شهاب عظیمی ، کلیه حقوق محفوظ می باشد</string>
+
+    <string name="stats_fragment_today">امروز</string>
+    <string name="stats_fragment_lastweek">7روز گذشته</string>
+    <string name="stats_fragment_lastmonth">1ماه گذشته</string>
+    <string name="stats_fragment_lastyear">1سال گذشته</string>
+    <string name="stats_fragment_alltime">تمام</string>
+
+    <string name="message_empty">پیامی جهت نمایش موجود نیست</string>
+
+    <string name="reset_btn">بازیابی</string>
+    <string name="reset_txt">ایمیل خود را وارد کنید و دستورالعمل داخل ایمیل را دنبال کنید. در صورت عدم دریافت ایمیل پوشه اسپم را چک کنید.</string>
+    <string name="reset_ok">موفقیت آمیز بود! یک ایمیل به آدرس شما فرستاده شد</string>
+
+</resources>

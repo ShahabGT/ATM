@@ -1,0 +1,108 @@
+<resources>
+    <string name="app_name" translatable="false">ATM</string>
+    <string name="email_style" translatable="false">abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@1234567890_.-</string>
+    <string name="username_style" translatable="false">abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890_</string>
+
+
+
+    <string name="activity_pic_url" translatable="false">https://shahabazimi.ir/atm/Activities/%s.png</string>
+    <string name="base_url" translatable="false">https://shahabazimi.ir/atm/</string>
+
+    <string name="intro_first_fragment_text1">Welcome to Activities Time Manager. \n\n ATM for short </string>
+    <string name="intro_first_fragment_text2">Please Select Your Language</string>
+
+    <string name="intro_second_fragment_text1">Just pick an activity, this app will calculate how much time you spent on it \n\n Piece of cake!</string>
+
+    <string name="intro_third_fragment_text1">The database is on the cloud, so don\'t worry about losing your data, also it\'s secure. \n \n ATM is open source and free too :)</string>
+
+    <string name="intro_fourth_fragment_text1">To start, just enable your internet then click the button below and create an account \n\n That\'s all</string>
+    <string name="intro_fourth_fragment_text2">Start</string>
+
+    <string name="login_username">Username</string>
+    <string name="login_resetpass">Forget password?</string>
+    <string name="login_password">Password</string>
+    <string name="login_login">Login</string>
+    <string name="login_register">Does not have an account? Click here</string>
+    <string name="login_user_error">Enter your username</string>
+    <string name="login_pass_error">Enter your password</string>
+    <string name="login_user_notexists">username does not exists!</string>
+    <string name="login_wrong_pass">Wrong password!</string>
+    <string name="login_success">Login successful, welcome %s</string>
+
+
+    <string name="reg_username">Username</string>
+    <string name="reg_password">Password</string>
+    <string name="reg_oldpassword">Old password</string>
+    <string name="reg_repassword">Repeat password</string>
+    <string name="reg_name">Full name</string>
+    <string name="reg_male">Male</string>
+    <string name="reg_female">Female</string>
+    <string name="reg_reg">Register</string>
+    <string name="reg_email">Email</string>
+    <string name="reg_pass_error">Check your password</string>
+    <string name="reg_name_error">Enter your name</string>
+    <string name="reg_email_error">Enter your email</string>
+    <string name="reg_user_error">Enter your username</string>
+    <string name="reg_user_exists">username already exists!</string>
+    <string name="reg_email_exists">email already exists!</string>
+    <string name="reg_success">Registration successful, welcome %s</string>
+
+    <string name="internet_error">Check your internet connection!</string>
+    <string name="error">Error! Please try again</string>
+    <string name="progressdialogtext">Please wait...</string>
+    <string name="bottomnavigation_home">Home</string>
+    <string name="start">START</string>
+    <string name="stop">STOP</string>
+    <string name="cancel">Cancel</string>
+    <string name="search">Search</string>
+    <string name="statistics">Statistics</string>
+    <string name="messages">Messages</string>
+    <string name="onbackpressed">Press Back Again To Exit!</string>
+    <string name="apply">Apply</string>
+    <string name="select_language">Select App\'s Language</string>
+    <string name="select_date">Select Date</string>
+    <string name="setting_text">Clicking the Apply button will close the app</string>
+    <string name="no_data">No data available</string>
+
+    <string name="history">Last Week\'s History (in hours)</string>
+    <string name="notificationMessage">To View or Stop Current Activity Tap Here</string>
+    <string name="notificationTitle">%s In Progress...</string>
+
+    <string name="permission_allow">Allow</string>
+    <string name="permission_deny">Deny</string>
+    <string name="permission_denied">Permission Denied</string>
+    <string name="permission_settings">Please allow permission in permissions section</string>
+    <string name="read_phone_state_title">Read Phone State</string>
+    <string name="read_phone_state_message">For the registration to complete you must grant this permission, we need this permission to identify you for security reasons.</string>
+
+    <string name="navigation_user">Edit Profile</string>
+    <string name="navigation_stats">Statistics</string>
+    <string name="navigation_message">Messages</string>
+    <string name="navigation_settings">Settings</string>
+    <string name="navigation_about">About</string>
+    <string name="navigation_logout">Log Out</string>
+
+    <string name="chngpass_wrongpass">Wrong password!</string>
+    <string name="chngpass_fillform">Fill the form</string>
+    <string name="chngpass_passlenght">Password length must be more than 8 characters</string>
+    <string name="chngpass_passnotmach">Password does not match</string>
+    <string name="chngpass_passduplicate">Old password and new password cannot be the same</string>
+    <string name="chngpass_success">Password changed successfully</string>
+
+    <string name="about_title">Activity Time Manager</string>
+    <string name="about_version">Version %s</string>
+    <string name="about_timestamp">2018 Shahab Azimi\nAll rights reserved.</string>
+
+    <string name="stats_fragment_today">Today</string>
+    <string name="stats_fragment_lastweek">Last Week</string>
+    <string name="stats_fragment_lastmonth">Last Month</string>
+    <string name="stats_fragment_lastyear">Last Year</string>
+    <string name="stats_fragment_alltime">All Time</string>
+
+    <string name="message_empty">No messages available</string>
+
+    <string name="reset_btn">Reset</string>
+    <string name="reset_txt">Enter your email, then follow instruction from the received email.\n check your spam folder if you did not received an email</string>
+    <string name="reset_ok">Successful! An email sent to your email address</string>
+
+</resources>
