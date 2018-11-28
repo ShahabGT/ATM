@@ -8,7 +8,7 @@
     <string name="activity_pic_url" translatable="false">https://shahabazimi.ir/atm/Activities/%s.png</string>
     <string name="base_url" translatable="false">https://shahabazimi.ir/atm/</string>
 
-    <string name="intro_first_fragment_text1">Welcome to Activities Time Manager. \n\n ATM for short </string>
+    <string name="intro_first_fragment_text1">Welcome to Activities Time Management. \n\n ATM for short </string>
     <string name="intro_first_fragment_text2">Please Select Your Language</string>
 
     <string name="intro_second_fragment_text1">Just pick an activity, this app will calculate how much time you spent on it \n\n Piece of cake!</string>
@@ -63,6 +63,7 @@
     <string name="select_date">Select Date</string>
     <string name="setting_text">Clicking the Apply button will close the app</string>
     <string name="no_data">No data available</string>
+    <string name="version">ver. 1.2</string>
 
     <string name="history">Last Week\'s History (in hours)</string>
     <string name="notificationMessage">To View or Stop Current Activity Tap Here</string>

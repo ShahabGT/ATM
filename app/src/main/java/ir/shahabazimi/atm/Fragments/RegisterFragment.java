@@ -55,7 +55,7 @@ public class RegisterFragment extends Fragment {
     private String rp ;
     private  String u ;
     private String t;
-    private String g;
+    private String g="Male";
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -92,10 +92,12 @@ public class RegisterFragment extends Fragment {
                 switch (checkedId){
                     case R.id.reg_male:
                         avatar.setImageDrawable(getResources().getDrawable(R.drawable.male));
+                        g="Male";
                         break;
 
                     case R.id.reg_female:
                         avatar.setImageDrawable(getResources().getDrawable(R.drawable.female));
+                        g="Female";
                         break;
                 }
             }
@@ -133,10 +135,10 @@ public class RegisterFragment extends Fragment {
                     if(!MyUtils.getInstance(getActivity()).checkInternet()){
                         MyToast.Create(getContext(),getString(R.string.internet_error));
                     }else{
-                        int selectedId = sex.getCheckedRadioButtonId();
-                        RadioButton radioButton =  onClickView.findViewById(selectedId);
                         t = FirebaseInstanceId.getInstance().getToken();
-                        g = radioButton.getText().toString();
+                        if(t==null || t.isEmpty()){
+                            t="notoken";
+                        }
 
                         requestReadPhoneState();
 

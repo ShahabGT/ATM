@@ -62,6 +62,8 @@
     <string name="select_date">انتخاب تاریخ</string>
     <string name="setting_text">با کلیل بر روی اعمال برنامه بسته می شود</string>
     <string name="no_data">داده ای موجود نیست</string>
+    <string name="version">ورژن 1.2</string>
+
 
     <string name="history">تاریخچه فعالیت در 7 روز گذشته(به ساعت)</string>
     <string name="notificationMessage">برای نمایش یا متوقف کردن فعالیت کلیک کنید</string>
