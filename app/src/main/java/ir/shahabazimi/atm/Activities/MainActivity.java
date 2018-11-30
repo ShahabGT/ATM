@@ -82,10 +82,14 @@ public class MainActivity extends AppCompatActivity {
         getSupportFragmentManager().beginTransaction().add(R.id.main_container,new HomeFragment()).commit();
         getSupportFragmentManager().beginTransaction().add(R.id.main_container2,new ActivityFragment()).commit();
 
-        if(MyUtils.getInstance(this).checkInternet())
-        checkForUpdated();
         ndrawer();
-        getHistory();
+
+        if(MyUtils.getInstance(this).checkInternet()) {
+            checkForUpdated();
+            getHistory();
+        }
+
+
 
         menuOpener.setOnClickListener(new View.OnClickListener() {
             @Override

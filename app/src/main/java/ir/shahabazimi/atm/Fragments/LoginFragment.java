@@ -114,91 +114,93 @@ public class LoginFragment extends Fragment {
                         MyToast.Create(getContext(),getString(R.string.internet_error));
                     }else{
                         t = FirebaseInstanceId.getInstance().getToken();
-                        requestReadPhoneState();
+
+                        registerUser(u,p,t);
+                       // requestReadPhoneState();
                     }
                 }
 
             }
         });
     }
-    private void requestReadPhoneState(){
-        PermissionUtil permissionUtil = new PermissionUtil(getActivity());
-
-        if(MyUtils.getInstance(getActivity()).checkPermission(Const.READ_PHONE_STATE)!=PackageManager.PERMISSION_GRANTED){
-
-            if(ActivityCompat.shouldShowRequestPermissionRationale(getActivity(),
-                    Manifest.permission.READ_PHONE_STATE)){
-                showExplanation(Const.READ_PHONE_STATE,getString(R.string.read_phone_state_title),getString(R.string.read_phone_state_message));
-
-            }
-
-            else if(!permissionUtil.check(Const.READ_PHONE_STATE)){
-                requestPermission(Const.READ_PHONE_STATE);
-                permissionUtil.update(Const.READ_PHONE_STATE);
-            }else{
-                MyToast.Create(getActivity(),getString(R.string.permission_settings));
-                Intent intent = new Intent();
-                intent.setAction(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
-                Uri uri = Uri.fromParts("package",getContext().getPackageName(),null);
-                intent.setData(uri);
-                startActivity(intent);
-            }
-        }else{
-            readPhoneState();
-        }
-
-    }
-    private  void showExplanation(final String Permission,final String title,final String message){
-        AlertDialog.Builder builder;
-        AlertDialog alertDialog;
-        builder = new AlertDialog.Builder(getContext());
-        builder.setTitle(title);
-        builder.setMessage(message);
-        builder.setPositiveButton(getContext().getString(R.string.permission_allow), new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                requestPermission(Permission);
-            }
-        });
-        builder.setNegativeButton(getContext().getString(R.string.permission_deny), new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                dialog.dismiss();
-            }
-        });
-
-        alertDialog =builder.create();
-        alertDialog.show();
-
-    }
-    private void requestPermission(String Permission){
-        switch (Permission){
-            case Const.READ_PHONE_STATE:
-                ActivityCompat.requestPermissions(getActivity(),
-                        new String[]{Manifest.permission.READ_PHONE_STATE},
-                        Const.READ_PHONE_STATE_CODE
-                );
-                break;
-        }
-
-    }
-    private void readPhoneState() throws SecurityException{
-        TelephonyManager telephonyManager = (TelephonyManager) getActivity().getApplicationContext().getSystemService(Context.TELEPHONY_SERVICE);
-
-        String deviceid = telephonyManager.getDeviceId();
-        if (deviceid == null) {
-            deviceid = Build.SERIAL;
-        }
-        registerUser(u,p,t,deviceid);
-    }
-    private void registerUser(String username, String password, String token, String imei){
+//    private void requestReadPhoneState(){
+//        PermissionUtil permissionUtil = new PermissionUtil(getActivity());
+//
+//        if(MyUtils.getInstance(getActivity()).checkPermission(Const.READ_PHONE_STATE)!=PackageManager.PERMISSION_GRANTED){
+//
+//            if(ActivityCompat.shouldShowRequestPermissionRationale(getActivity(),
+//                    Manifest.permission.READ_PHONE_STATE)){
+//                showExplanation(Const.READ_PHONE_STATE,getString(R.string.read_phone_state_title),getString(R.string.read_phone_state_message));
+//
+//            }
+//
+//            else if(!permissionUtil.check(Const.READ_PHONE_STATE)){
+//                requestPermission(Const.READ_PHONE_STATE);
+//                permissionUtil.update(Const.READ_PHONE_STATE);
+//            }else{
+//                MyToast.Create(getActivity(),getString(R.string.permission_settings));
+//                Intent intent = new Intent();
+//                intent.setAction(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
+//                Uri uri = Uri.fromParts("package",getContext().getPackageName(),null);
+//                intent.setData(uri);
+//                startActivity(intent);
+//            }
+//        }else{
+//            readPhoneState();
+//        }
+//
+//    }
+//    private  void showExplanation(final String Permission,final String title,final String message){
+//        AlertDialog.Builder builder;
+//        AlertDialog alertDialog;
+//        builder = new AlertDialog.Builder(getContext());
+//        builder.setTitle(title);
+//        builder.setMessage(message);
+//        builder.setPositiveButton(getContext().getString(R.string.permission_allow), new DialogInterface.OnClickListener() {
+//            @Override
+//            public void onClick(DialogInterface dialog, int which) {
+//                requestPermission(Permission);
+//            }
+//        });
+//        builder.setNegativeButton(getContext().getString(R.string.permission_deny), new DialogInterface.OnClickListener() {
+//            @Override
+//            public void onClick(DialogInterface dialog, int which) {
+//                dialog.dismiss();
+//            }
+//        });
+//
+//        alertDialog =builder.create();
+//        alertDialog.show();
+//
+//    }
+//    private void requestPermission(String Permission){
+//        switch (Permission){
+//            case Const.READ_PHONE_STATE:
+//                ActivityCompat.requestPermissions(getActivity(),
+//                        new String[]{Manifest.permission.READ_PHONE_STATE},
+//                        Const.READ_PHONE_STATE_CODE
+//                );
+//                break;
+//        }
+//
+//    }
+//    private void readPhoneState() throws SecurityException{
+//        TelephonyManager telephonyManager = (TelephonyManager) getActivity().getApplicationContext().getSystemService(Context.TELEPHONY_SERVICE);
+//
+//        String deviceid = telephonyManager.getDeviceId();
+//        if (deviceid == null) {
+//            deviceid = Build.SERIAL;
+//        }
+//        registerUser(u,p,t,deviceid);
+//    }
+    private void registerUser(String username, String password, String token){
 
         progressDialog.setIndeterminate(true);
         progressDialog.setCancelable(false);
         progressDialog.setMessage(getString(R.string.progressdialogtext));
         progressDialog.show();
         LoginUserController loginUserController = new LoginUserController(loginUserListener);
-        loginUserController.start(username,password,token,imei);
+        loginUserController.start(username,password,token);
 
 
     }
@@ -249,16 +251,16 @@ public class LoginFragment extends Fragment {
 
 
 
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        switch (requestCode){
-            case Const.READ_PHONE_STATE_CODE:
-                if(grantResults.length>0 && grantResults[0]==PackageManager.PERMISSION_GRANTED){
-                    readPhoneState();
-                }else{
-                    MyToast.Create(getActivity(),getString(R.string.permission_denied));
-                }
-        }
-    }
+//    @Override
+//    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+//        switch (requestCode){
+//            case Const.READ_PHONE_STATE_CODE:
+//                if(grantResults.length>0 && grantResults[0]==PackageManager.PERMISSION_GRANTED){
+//                    readPhoneState();
+//                }else{
+//                    MyToast.Create(getActivity(),getString(R.string.permission_denied));
+//                }
+//        }
+//    }
 
 }

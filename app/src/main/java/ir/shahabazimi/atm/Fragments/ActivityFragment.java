@@ -1,6 +1,8 @@
 package ir.shahabazimi.atm.Fragments;
 
 
+import android.animation.ObjectAnimator;
+import android.animation.ValueAnimator;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -22,6 +24,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -56,10 +59,12 @@ public class ActivityFragment extends Fragment {
     private TextView name,timer;
     private Button start,stop;
     private SimpleDraweeView pic;
-    private LinearLayout linearLayout;
+    private LinearLayout linearLayout,selectLinear;
     private MyRoomDatabase myRoomDatabase;
     private FrameLayout frameLayout;
     private BarChart mBarChart;
+    private ImageView selectImg;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -78,21 +83,43 @@ public class ActivityFragment extends Fragment {
         timer = v.findViewById(R.id.activity_timer);
         name = v.findViewById(R.id.activity_name);
         pic = v.findViewById(R.id.activity_pic);
+        selectImg = v.findViewById(R.id.activity_select_img);
         linearLayout = v.findViewById(R.id.activity_linear);
+        selectLinear = v.findViewById(R.id.activity_select);
         frameLayout = getActivity().findViewById(R.id.main_container);
         haveActiveActivity();
         onClicks();
         checkStat();
         getStats();
     }
+    private void selectImgAnimation(boolean start){
+
+        ObjectAnimator trasntaltionAnim = ObjectAnimator.ofFloat(
+                selectImg,
+                "TranslationY",
+                -50f,50f
+        );
+        trasntaltionAnim.setDuration(500);
+        trasntaltionAnim.setRepeatCount(ValueAnimator.INFINITE);
+        trasntaltionAnim.setRepeatMode(ValueAnimator.REVERSE);
+        if(start) trasntaltionAnim.start();
+        else trasntaltionAnim.cancel();
+
+
+
+    }
 
     private void haveActiveActivity(){
         if(!MySharedPreference.getInstance(getContext()).getActiveActivityName().isEmpty()){
             linearLayout.setVisibility(View.VISIBLE);
+            selectLinear.setVisibility(View.GONE);
+            selectImgAnimation(false);
             name.setText(MySharedPreference.getInstance(getContext()).getActiveActivityName());
             pic.setImageURI(Uri.parse(MySharedPreference.getInstance(getContext()).getActiveActivityPic()));
         }else {
             linearLayout.setVisibility(View.GONE);
+            selectLinear.setVisibility(View.VISIBLE);
+            selectImgAnimation(true);
         }
     }
     private void checkStat(){

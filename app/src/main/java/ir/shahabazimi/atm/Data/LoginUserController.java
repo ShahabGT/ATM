@@ -15,12 +15,12 @@ public class LoginUserController {
         this.loginUserListener = loginUserListener;
     }
 
-    public void start(String username, String password, String token, String imei){
+    public void start(String username, String password, String token){
 
         Retrofit retrofit = RetrofitClient.getClient();
         DataApi dataApi = retrofit.create(DataApi.class);
 
-        Call<JsonResponseModel> call = dataApi.loginUser(username, password, token, imei);
+        Call<JsonResponseModel> call = dataApi.loginUser(username, password, token);
         call.enqueue(new Callback<JsonResponseModel>() {
             @Override
             public void onResponse(Call<JsonResponseModel> call, Response<JsonResponseModel> response) {

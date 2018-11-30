@@ -4,7 +4,6 @@
     <string name="username_style" translatable="false">abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890_</string>
 
 
-
     <string name="activity_pic_url" translatable="false">https://shahabazimi.ir/atm/Activities/%s.png</string>
     <string name="base_url" translatable="false">https://shahabazimi.ir/atm/</string>
 
@@ -105,5 +104,7 @@
     <string name="reset_btn">Reset</string>
     <string name="reset_txt">Enter your email, then follow instruction from the received email.\n check your spam folder if you did not received an email</string>
     <string name="reset_ok">Successful! An email sent to your email address</string>
+
+    <string name="select_text">To Start, Select An Activity!</string>
 
 </resources>

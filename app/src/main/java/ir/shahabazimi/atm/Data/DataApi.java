@@ -20,7 +20,6 @@ public interface DataApi {
                                          @Field("email") String email,
                                          @Field("password") String password,
                                          @Field("token") String token,
-                                         @Field("imei") String imei,
                                          @Field("sex") String sex);
 
     interface registerUserListener{
@@ -31,8 +30,7 @@ public interface DataApi {
     @POST("login.php")
     Call<JsonResponseModel> loginUser(@Field("username") String username,
                                       @Field("password") String password,
-                                      @Field("token") String token,
-                                      @Field("imei") String imei);
+                                      @Field("token") String token);
     interface loginUserListener{
         void getMessage(boolean successful,JsonResponseModel message);
     }

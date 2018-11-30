@@ -62,7 +62,7 @@
     <string name="select_date">انتخاب تاریخ</string>
     <string name="setting_text">با کلیل بر روی اعمال برنامه بسته می شود</string>
     <string name="no_data">داده ای موجود نیست</string>
-    <string name="version">ورژن 1.2</string>
+    <string name="version">نسخه 1.2</string>
 
 
     <string name="history">تاریخچه فعالیت در 7 روز گذشته(به ساعت)</string>
@@ -105,5 +105,8 @@
     <string name="reset_btn">بازیابی</string>
     <string name="reset_txt">ایمیل خود را وارد کنید و دستورالعمل داخل ایمیل را دنبال کنید. در صورت عدم دریافت ایمیل پوشه اسپم را چک کنید.</string>
     <string name="reset_ok">موفقیت آمیز بود! یک ایمیل به آدرس شما فرستاده شد</string>
+
+    <string name="select_text">برای شروع یک فعالیت را انتخاب کنید</string>
+
 
 </resources>
